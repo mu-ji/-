@@ -1,0 +1,184 @@
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+import random
+num = int(input("请输入开箱个数"))
+i = 1
+squares = [0]
+money = 0
+while i <= num:
+    #money = gaitongtext._open_case()
+    x = random.random()
+    if x < 0.00125:
+        dig = random.random()
+        print(dig)
+        price = 61 + (1251-61)*(1 - dig)
+        print("get knife price lalalalalalalalalalala", price)
+        money = money + price
+        #number_kinfe = number_kinfe + 1
+        
+        i = i + 1
+        squares.append(money*0.96/(2.53*i))
+        continue
+    if x < 0.008:
+        kind = random.randint(0,1)
+        dig = random.random()
+        print(dig)
+        if kind == 0:
+            price = 10.41 + (81-10.41)*(1 - dig)
+            print("get m4a1s price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 1:
+            price = 13.25 + (79.52 - 13.25)*(1 - dig)
+            print("get glock price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+    if x < 0.0375:
+        kind = random.randint(0,2)
+        dig = random.random()
+        print(dig)
+        if kind == 0:
+            price = 1.87 +(10.6 - 1.87)*(1 - dig)
+            print("get mag price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 1:
+            price = 2.55 + (17.18 - 2.55)*(1 - dig)
+            print("get mac price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 2:
+            price = 9 + (17.45 - 9)*(1 - dig)
+            print("get ak price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+    if x < 0.1925:
+        kind = random.randint(0,4)
+        dig = random.random()
+        print(dig)
+        if kind == 0:
+            price = 0.63 + (2.68 - 0.63)*(1 - dig)
+            print("get ssg price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 1:
+            price = 0.49 + (3 - 0.49)*(1 - dig)
+            print("get sg price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 2:
+            price = 0.5 + (2.13 - 0.5)*(1 - dig)
+            print("get scar price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 3:
+            price = 0.5 + (2.14 - 0.5)*(1 - dig)
+            print("get s-off price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 4:
+            price = 0.49 + (2.18 - 0.49)*(1 - dig)
+            print("get p2000 price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+    if x < 0.76375:
+        kind = random.randint(0,6)
+        dig = random.random()
+        print(dig)
+        if kind == 0:
+            price = 0.1 + (0.28 - 0.1)*(1 - dig)
+            print("get r8 price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 1:
+            price = 0.09 + (0.27 - 0.09)*(1 - dig)
+            print("get neg price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 2:
+            price = 0.09 + (0.4 - 0.09)*(1 - dig)
+            print("get mp5 price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 3:
+            price = 0.23 + (1.55 - 0.23)*(1 - dig)
+            print("get de price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 4:
+            price = 0.09 + (0.34 - 0.09)*(1 - dig)
+            print("get cz price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 5:
+            price = 0.4 + (2.71 - 0.4)*(1 - dig)
+            print("get awp price",price)
+            money = money + price
+            
+            i = i + 1
+            squares.append(money*0.96/(2.53*i))
+            continue
+        if kind == 6:
+            price = 0.09 + (0.49 - 0.09)*(1 - dig)
+            print("get aug price",price)
+            money = money + price
+            
+            i = i + 1
+    else:
+        continue
+    squares.append(money*0.96/(2.53*i))
+
+xl = [i for i in range(num+1)]
+
+plt.plot(xl,squares)
+plt.title("profit rate - number of case")
+plt.xlabel("number of case")
+plt.ylabel("profit rate")
+plt.show()
